@@ -1,15 +1,35 @@
 {
   "store.home": { 
-    "blocks": [
-      "rich-text"
+    "blocks": [ 
+      "modal-trigger#first"
+    ]
+  
+  },
+  //DEFINIENDO MODALES
+  "modal-trigger#first": {
+    "children": [
+      "rich-text#trigger",
+      "modal-layout#first"
     ]
   },
-  "rich-text": { 
-    "props": { 
-      "text": "iniciando",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
+  "rich-text#trigger": {
+    "props": {
+      "text": "CLICK ME"
+      
+    }
+  },
+
+//agregamos otro children linea 12
+  //definimos ahora el modal
+  "modal-layout#first":{
+    "children":[
+      "rich-text#hello"
+    ]
+  },
+  "rich-text#hello":{
+    "props":{
+      "text":"https://www.youtube.com/watch?v=Za-3B2Bx1SM"
     }
   }
+
 }
