@@ -1,11 +1,49 @@
 {
   "store.home": { 
-    "blocks": [ 
-      "modal-trigger#first"
+    "blocks": [
+      "stack-layout#cta" // llamado a la accion CTA
+    //  "rich-text",
+    //  "modal-trigger#first",
+    //  "list-context.product-list"
     ]
-  
   },
-  //DEFINIENDO MODALES
+  "stack-layout#cta":{ // DISEÑO DE PILA PARA APILAR BLOQUES
+    "children":[
+      "image#cta",
+      "link#cta"
+    ]
+  },
+  "image#cta":{
+    "props":{
+      "blockClass":"cover",
+      "width":"100%",
+      "height":400,
+      "src": "https://appliancetheme.vtexassets.com/assets/app/src/appliancecat___1b7592b49667c6a89203a0997e06bc87.jpg"
+    }
+  },
+  "link#cta": {
+    "props":{
+      "displayMode": "button",
+      "buttonProps":{
+        "variant": "primary",
+        "size": "large"
+      },
+      "href":"/washer",
+      "label":"Check these awesome discounts"
+    }
+  }
+  
+  
+  //,
+  /*"rich-text": { 
+    "props": { 
+      "text": "",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "font": "t-heading-1"
+  
+  }
+  },    //DEFINIENDO MODALES
   "modal-trigger#first": {
     "children": [
       "rich-text#trigger",
@@ -15,11 +53,11 @@
   "rich-text#trigger": {
     "props": {
       "text": "CLICK ME"
-      
+
     }
   },
 
-//agregamos otro children linea 12
+//agregamos otro children linea
   //definimos ahora el modal
   "modal-layout#first":{
     "children":[
@@ -30,6 +68,35 @@
     "props":{
       "text":"https://www.youtube.com/watch?v=Za-3B2Bx1SM"
     }
-  }
+  },
+  "list-context.product-list":{
+    "blocks":["product-summary.shelf"],
+    "children":["slider-layout"]
+  },
+  "product-summary.shelf":{
+    "children":[
+      "modal-trigger#quickview",// agregamos el DISPARADOR ...TRIGGER
+      "product-summary-name",
+      "product-selling-price"
+    ]
+  },
+  "modal-trigger#quickview":{
+    "children":[
+      "product-summary-image",//hacemos que el DISPARADOR SEA LA IMAGEN DEL PRODUCTO
+      "modal-layout#quickview"// DEFINAMOS QUE SERA USADO UN LAYOUT
+  ]
+  },//DEFINIMOS UN MODAL "SIMPLE" CON ALGUNAS OPCIONES DE PRODUCTOS
+  "modal-layout#quickview":{
+    "children":[
+      "product-summary-name",
+      "product-images",
+      "product-summary-sku-selector",
+      "product-summary-quantity",
+      "add-to-cart-button"
 
+    ]
+  }*/
 }
+
+
+
