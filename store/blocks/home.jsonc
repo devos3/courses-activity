@@ -1,12 +1,52 @@
 {
   "store.home": { 
     "blocks": [
-      "stack-layout#cta" // llamado a la accion CTA
-    //  "rich-text",
+      
+    //  "stack-layout#cta" // llamado a la accion CTA
+      "rich-text",
+      "info-card#clearance",
+      "info-card#vintage"
     //  "modal-trigger#first",
     //  "list-context.product-list"
     ]
   },
+
+  "rich-text": {
+    "props": {
+      "text": "VTEX Store Framework",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "font": "t-heading-1"
+    }
+  },
+  "info-card#clearance": {
+    "props": {
+      "id": "info-card-clearance",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
+      "headline": "Clearance Sale",
+      "callToActionText": "DISCOVER",
+      "callToActionUrl": "/sale/d",
+      "textAlignment": "center"
+    }
+  },
+  "info-card#vintage": {
+    "props": {
+        "id": "info-card-vintage",
+        "isFullModeStyle": false,
+        "textPosition": "right",
+        "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-rosa-min.png",
+        "headline": "Vintage",
+        "callToActionText": "DISCOVER",
+        "callToActionUrl": "/sale/d",
+        "textAlignment": "center",
+        "blockClass": "vintage"//AGREGA UN ESTILO ESPECIFICO A LA INFOCARD
+        
+    }
+  }
+  
+  /*,
   "stack-layout#cta":{ // DISEÑO DE PILA PARA APILAR BLOQUES
     "children":[
       "image#cta",
@@ -32,7 +72,7 @@
       "label":"Check these awesome discounts"
     }
   }
-  
+*/ 
   
   //,
   /*"rich-text": { 
