@@ -3,7 +3,8 @@
   "store.product": {
     "children": [
       "flex-layout.row#product-breadcrumb",
-      "flex-layout.row#product-main"
+      "flex-layout.row#product-main",
+      "condition-layout.product"
     ]
   },
   "flex-layout.row#product-breadcrumb": {
@@ -66,5 +67,35 @@
         "Pinterest": true
       }
     }
+  },
+  //DEFINIMOA CONDITION LAYOUT, CON UNA ESPECIFICA CONDITION
+  "condition-layout.product": {
+    "children": [
+      "condition.product#retro-mixer"
+    ]
+  },
+  "condition.product#retro-mixer": {
+    "props": {
+      "conditions":[
+        {
+          "subject":"productId",
+          "verb":"is",
+          "object":"20"
+        }
+      ]
+    },
+    "children":[
+      "image#retro-mixer-banner"
+    ]
+  },
+// DEFINIMOS EL BANNER
+  "image#retro-mixer-banner": {
+    "props": {
+      "src": "https://appliancetheme.vtexassets.com/assets/app/src/retroimage___92a8271aac7c51d2059193bdbe019016.jpg",
+      "width": "100%",
+      "height": "200px",
+      "blockClass": "cover"
+    }
   }
+
 }
